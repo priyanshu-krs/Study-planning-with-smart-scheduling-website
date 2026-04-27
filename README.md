@@ -30,6 +30,6 @@ Designed to improve productivity, time management, and study consistency through
 
 ### 🌐 Live Demo
 
-**Deploy Link:** [Add your deployed website link here]
+https://priyanshu-krs.github.io/Study-planning-with-smart-scheduling-website/
 
 ⭐ Star this project on GitHub if you like it!
