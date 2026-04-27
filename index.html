@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Study Planner Pro</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <h2>📘 StudyPro</h2>
+        </div>
+
+        <nav>
+            <ul>
+                <li class="active" data-section="dashboard">🏠 Dashboard</li>
+                <li data-section="planner">📅 Planner</li>
+                <li data-section="calendar">🗓 Calendar</li>
+                <li data-section="notes">📝 Notes</li>
+                <li data-section="timer">⏳ Focus Timer</li>
+                <li data-section="analytics">📊 Analytics</li>
+            </ul>
+        </nav>
+
+        <button id="themeBtn">🌙 Toggle Theme</button>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+
+        <header class="topbar">
+            <div>
+                <h1>Welcome Back 👋</h1>
+                <p>Plan smarter, study better.</p>
+            </div>
+
+            <div class="streak-box">
+                🔥 Streak: <span id="streakCount">0</span> days
+            </div>
+        </header>
+
+        <!-- Dashboard -->
+        <section id="dashboard" class="page active-page">
+
+            <div class="cards">
+                <div class="card">
+                    <h3>Total Tasks</h3>
+                    <h2 id="totalTasks">0</h2>
+                </div>
+
+                <div class="card">
+                    <h3>Completed</h3>
+                    <h2 id="completedTasks">0</h2>
+                </div>
+
+                <div class="card">
+                    <h3>Study Hours</h3>
+                    <h2 id="studyHours">0</h2>
+                </div>
+
+                <div class="card">
+                    <h3>Upcoming Exams</h3>
+                    <h2 id="examCount">0</h2>
+                </div>
+            </div>
+
+            <div class="quote-box">
+                <h3 id="quote">Success is built daily.</h3>
+            </div>
+
+        </section>
+
+        <!-- Planner -->
+        <section id="planner" class="page">
+
+            <h2>Add Study Task</h2>
+
+            <div class="form-grid">
+                <input type="text" id="taskName" placeholder="Task / Subject">
+
+                <input type="number" id="taskHours" placeholder="Hours">
+
+                <select id="taskPriority">
+                    <option>High</option>
+                    <option>Medium</option>
+                    <option>Low</option>
+                </select>
+
+                <button id="addTaskBtn">Add Task</button>
+            </div>
+
+            <ul id="taskList"></ul>
+
+        </section>
+
+        <!-- Calendar -->
+        <section id="calendar" class="page">
+
+            <h2>Exam Countdown</h2>
+
+            <div class="form-grid">
+                <input type="text" id="examName" placeholder="Exam Name">
+                <input type="date" id="examDate">
+                <button id="addExamBtn">Add Exam</button>
+            </div>
+
+            <ul id="examList"></ul>
+
+        </section>
+
+        <!-- Notes -->
+        <section id="notes" class="page">
+
+            <h2>Quick Notes</h2>
+
+            <textarea id="notesArea" placeholder="Write your notes..."></textarea>
+
+            <button id="saveNotesBtn">Save Notes</button>
+
+        </section>
+
+        <!-- Timer -->
+        <section id="timer" class="page">
+
+            <h2>Pomodoro Focus Timer</h2>
+
+            <div class="timer-box">
+                <h1 id="timerDisplay">25:00</h1>
+
+                <div class="timer-buttons">
+                    <button id="startTimerBtn">Start</button>
+                    <button id="resetTimerBtn">Reset</button>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Analytics -->
+        <section id="analytics" class="page">
+
+            <h2>Progress Analytics</h2>
+
+            <canvas id="studyChart"></canvas>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
